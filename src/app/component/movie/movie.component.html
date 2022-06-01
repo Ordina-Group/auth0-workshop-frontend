@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" [(ngModel)]="name">
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="image">Image: </label>
+        <input type="text" class="form-control" id="image" placeholder="Image" name="image" [(ngModel)]="image">
+    </div>
+    <br>
+    <button (click)="createNewMovie()" type="submit" class="btn btn-primary">Submit</button>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let movie of movies$ | async">
+            <app-movie-item [name]="movie.name" [image]="movie.imageUrl"></app-movie-item>
+        </div>
+    </div>
+</div>

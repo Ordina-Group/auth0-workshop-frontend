@@ -1,0 +1,12 @@
+.container {
+    margin: 50px;
+    
+}
+
+.movie img {
+    width: 350px;
+}
+
+.movie {
+    padding-bottom: 50px;
+}
