@@ -9,6 +9,8 @@ import { MovieComponent } from './component/movie/movie.component';
 import { MovieItemComponent } from './component/movie-item/movie-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,12 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AuthModule.forRoot({
+      domain: environment.domain,
+      clientId: environment.clientId,
+      redirectUri: environment.redirectUri
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
