@@ -7,7 +7,8 @@ export const environment = {
   apiUrl: 'http://localhost:8080',
   clientId: 'OmDeY9jtyyhHzsQC13wkQnYKPtXBrYvu',
   domain: 'demo-nicholas-2206.eu.auth0.com',
-  redirectUri: 'http://localhost:4200/user'
+  redirectUri: 'http://localhost:4200/user',
+  audience: 'http://localhost:8080'
 };
 
 /*
